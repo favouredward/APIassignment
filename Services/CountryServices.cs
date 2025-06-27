@@ -63,21 +63,21 @@ namespace APIassignment.Services
             return countries ?? new List<CountryModel>();
         }
          
-        public async Task<List<CountryModel>> GetByNameAsync(string name)
-        {
-            var response = await _httpClient.GetAsync($"https://restcountries.com/v3.1/name/{name}");
+        //public async Task<List<CountryModel>> GetByNameAsync(string name)
+        //{
+        //    var response = await _httpClient.GetAsync($"https://restcountries.com/v3.1/name/{name}");
 
-            if (!response.IsSuccessStatusCode)
-                throw new HttpRequestException("Country not found");
+        //    if (!response.IsSuccessStatusCode)
+        //        throw new HttpRequestException("Country not found");
 
-            var content = await response.Content.ReadAsStringAsync();
-            var countries = JsonSerializer.Deserialize<List<CountryModel>>(content, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+        //    var content = await response.Content.ReadAsStringAsync();
+        //    var countries = JsonSerializer.Deserialize<List<CountryModel>>(content, new JsonSerializerOptions
+        //    {
+        //        PropertyNameCaseInsensitive = true
+        //    });
 
-            return countries ?? new List<CountryModel>();
-        }
+        //    return countries ?? new List<CountryModel>();
+        //}
 
         //public async Task<List<CountryModel>?> GetCountryByNameAsync(string name)
         //{

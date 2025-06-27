@@ -58,19 +58,19 @@ public class CountryController : ControllerBase
         }
     }
 
-    [HttpGet("by-name/{name}")]
-    public async Task<IActionResult> GetByName(string name)
-    {
-        try
-        {
-            var countries = await _countryService.GetByNameAsync(name);
-            return Ok(countries);
-        }
-        catch (Exception ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
+    //[HttpGet("by-name/{name}")]
+    //public async Task<IActionResult> GetByName(string name)
+    //{
+    //    try
+    //    {
+    //        var countries = await _countryService.GetByNameAsync(name);
+    //        return Ok(countries);
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        return NotFound(ex.Message);
+    //    }
+    //}
 
     // POST: api/country/by-name
     // Accepts a country name in the body and fetches it from the external API

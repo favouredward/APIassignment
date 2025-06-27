@@ -8,7 +8,7 @@ namespace APIassignment.Services
         Task<List<CountryModel>> GetAllCountriesAsync();
         Task<List<CountryModel>> GetByRegionAsync(string region);
         Task<List<CountryModel>> GetByCapitalAsync(string capital);
-        Task<List<CountryModel>> GetByNameAsync(string name);
+        //Task<List<CountryModel>> GetByNameAsync(string name);
         Task<List<CountryModel>?> GetCountryByNameAsync(string name);
     }
 }
